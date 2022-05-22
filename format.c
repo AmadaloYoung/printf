@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * get_specifier - finds the format func
- * @s: the format string
- *
- * Return: the number of bytes printed
+ * get_specifier - finds the format function
+ * @s: format string
+ * Return: number of bytes printed
  */
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
@@ -39,12 +38,11 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 }
 
 /**
- * get_print_func - finds the format func
- * @s: the format string
+ * get_print_func - finds the format function
+ * @s: format string
  * @ap: argument pointer
- * @params: the parameters struct
- *
- * Return: the number of bytes printed
+ * @params: parameters struct
+ * Return: number of bytes printed
  */
 int get_print_func(char *s, va_list ap, params_t *params)
 {
@@ -56,10 +54,9 @@ int get_print_func(char *s, va_list ap, params_t *params)
 }
 
 /**
- * get_flag - finds the flag func
- * @s: the format string
- * @params: the parameters struct
- *
+ * get_flag - finds the flag function
+ * @s: format string
+ * @params: parameters struct
  * Return: if flag was valid
  */
 int get_flag(char *s, params_t *params)
@@ -88,10 +85,9 @@ int get_flag(char *s, params_t *params)
 }
 
 /**
- * get_modifier - finds the modifier func
- * @s: the format string
+ * get_modifier - finds the modifier function
+ * @s: format string
  * @params: the parameters struct
- *
  * Return: if modifier was valid
  */
 int get_modifier(char *s, params_t *params)
@@ -112,10 +108,9 @@ int get_modifier(char *s, params_t *params)
 
 /**
  * get_width - gets the width from the format string
- * @s: the format string
- * @params: the parameters struct
- * @ap: the argument pointer
- *
+ * @s: format string
+ * @params: parameters struct
+ * @ap: argument pointer
  * Return: new pointer
  */
 char *get_width(char *s, params_t *params, va_list ap)
