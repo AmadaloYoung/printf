@@ -2,10 +2,9 @@
 
 /**
  * get_precision - gets the precision from the format string
- * @p: the format string
- * @params: the parameters struct
- * @ap: the argument pointer
- *
+ * @p: format string
+ * @params: parameters struct
+ * @ap: argument pointer
  * Return: new pointer
  */
 char *get_precision(char *p, params_t *params, va_list ap)
@@ -26,5 +25,5 @@ char *get_precision(char *p, params_t *params, va_list ap)
 			d = d * 10 + (*p++ - '0');
 	}
 	params->precision = d;
-	return (p);
+	return (p);	
 }
